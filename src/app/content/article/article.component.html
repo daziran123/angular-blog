@@ -1,0 +1,51 @@
+
+<div class="article">
+  <div class="title">
+    <h1>{{article.title}}</h1>
+    <p>{{article.date}}</p>
+  </div>
+  <div class="content">
+    {{article.content}}
+  </div>
+  <hr>
+<!-- 改造成 Angular 的表单
+  首先对表单进行一个声明：<form #comment="ngForm">...</form>。
+提交表单之后，将值传给控制器的一个函数： 
+  <form #comment="ngForm" (ngSubmit)="commentSubmit(comment.value)">...</form>。 
+  给每个input上添加ngModel。 
+  <input ngModel name="username" type="text"> <input ngModel name="email" type="text"> 
+  <textarea ngModel name="content" rows="4"></textarea> -->
+  
+  <div class="gusetBookForm">
+    <p>雁过留声</p>
+    <form #comment="ngForm" (ngSubmit)="commentSubmit(comment.value)">
+      <div class="user" ngModelGroup="userInfo" >
+        <div class="name">
+          <div class="text">名字：</div>
+          <div class="input"><input ngModel name="username" type="text"></div>
+        </div>
+        <div class="email">
+          <div class="text">Email：</div>
+          <div class="input"><input ngModel name="email" type="text"></div>
+      </div>
+    </div>
+      <div class="content">
+        <div class="text">Email：</div>
+        <div class="input"><textarea ngModel  name="content" rows="4"></textarea></div>
+        <div class="submit"><button class="subBtn" type="submit">提交</button></div>
+      </div>
+    </form>
+ 
+  </div>
+  <hr>
+  
+  <div class="gusetBook-Box">
+    <ul class="gusetBookLists">
+      <li class="gusetBook" *ngFor="let guestbook of guestbooks">
+        <p class="user"><span class="name">{{guestbook.name}}</span>说：</p>
+        <p class="content">{{guestbook.content}}</p>
+      </li>
+    </ul>
+  </div>
+</div>
+ 

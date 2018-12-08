@@ -1,0 +1,8 @@
+
+
+<li *ngFor="let article of articles  " class="article"  pointer (click)="articleNav(articles)">
+  <a style="cursor:pointer">
+    <span class="title">{{article.title}}</span>
+    <span class="time">{{article.date | date:'MMMM ,dd,yy'}}</span>
+  </a>
+</li>

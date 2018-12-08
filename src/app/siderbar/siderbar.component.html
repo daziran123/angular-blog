@@ -1,0 +1,22 @@
+<div class="sidebar">
+  <div class="about">
+    <div class="me">
+      <h2 class="name">{{bloginfo.username}}</h2>
+      <p>{{bloginfo.careerdirction}}</p>
+    </div>
+    <div class="about-link">
+      <ul>
+        <li *ngFor="let myinfo of myinfos"><a href="{{myinfo.link}}" target="_blank" title="{{myinfo.name}}"><i
+          class="{{myinfo.ico}}"></i></a></li>
+      </ul>
+    </div>
+  </div>
+  <nav class="nav">
+    <ul>
+      <li *ngFor="let menu of menus"><a href="{{menu.link}}">{{menu.name}}</a></li>
+    </ul>
+  </nav>
+  <div class="info">
+    <p>{{bloginfo.footerinfo}}</p>
+  </div>
+</div>

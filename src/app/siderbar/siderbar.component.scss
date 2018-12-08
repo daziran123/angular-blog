@@ -1,0 +1,52 @@
+.sidebar {
+    width: 158px;
+    display: inline-block;
+    padding-top: 15px;
+    vertical-align: top;
+    .about {
+      font-size: 0;
+      padding-left: 32px;
+      margin-bottom: 15px;
+      .me {
+        text-align: center;
+        width: 90px;
+        h2 {
+          font-size: 15px;
+        }
+        p {
+          font-size: 13px;
+        }
+      }
+      .about-link {
+        width: 90px;
+        text-align: center;
+        li {
+          display: inline-block;
+          width: 30px;
+          height: 30px;
+          line-height: 30px;
+          a {
+            color: #000;
+          }
+        }
+      }
+    }
+    .nav {
+      border-top: 1px solid #000;
+      border-bottom: 1px solid #000;
+      padding-left: 32px;
+      li {
+        font-size: 20px;
+  
+        line-height: 35px;
+        a {
+          color: #000;
+        }
+      }
+    }
+    .info {
+      padding-top: 30px;
+      font-size: 14px;
+      text-align: center;
+    }
+  }
