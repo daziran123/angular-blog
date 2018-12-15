@@ -1,0 +1,13 @@
+卷 软件 的文件夹 PATH 列表
+卷序列号为 000F-FC13
+E:.
+├─app
+│  ├─content
+│  │  ├─article
+│  │  └─article-list
+│  ├─header
+│  ├─service
+│  └─siderbar
+├─assets
+│  └─font
+└─environments

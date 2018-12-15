@@ -16,12 +16,17 @@
   <input ngModel name="username" type="text"> <input ngModel name="email" type="text"> 
   <textarea ngModel name="content" rows="4"></textarea> -->
   
+
+
   <div class="gusetBookForm">
-    <p>雁过留声</p>
+    <p>留言</p>
+    <!-- angular  接管表单，首先对表单进行一个声明  <form #comment="ngForm">...</form> -->
+    <!-- 提交表单之后，将值传给控制器的一个函数： (ngSubmit)="commentSubmit(comment.value) -->
     <form #comment="ngForm" (ngSubmit)="commentSubmit(comment.value)">
       <div class="user" ngModelGroup="userInfo" >
         <div class="name">
           <div class="text">名字：</div>
+          <!-- 给每个input上添加ngModel -->
           <div class="input"><input ngModel name="username" type="text"></div>
         </div>
         <div class="email">
